@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -tmrurz10/11microservices:latest ."
+                        sh "docker build -tmrurz10/productcatalogservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push mrurz10/11microservices:latest "
+                        sh "docker push mrurz10/productcatalogservice:latest "
                     }
                 }
             }
